@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arry = ["hello","bye","say","ok","hello","hello"]
+    var arry2 = ["hello","say","not","to","work"]
+    var arrry3 = arry.concat(arry2);
+    function solve(arr){
+        var unq = []
+        for(let i=0;i<arr.length;i++){
+        if(unq.indexOf(arr[i])===-1)
+                {
+                    unq.push(arr[i])
+                }
+        }
+
+       return unq;
+    }
+
+    const dj = solve(arrry3);
+    document.write(dj)
+</script>
+<body>
+    
+</body>
+</html>

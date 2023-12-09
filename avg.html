@@ -1,0 +1,48 @@
+<!-- Write a Java script program which computes, the average marks of the 
+following students then, this average is used to determine the corresponding 
+grade.
+Student Name Marks
+Sumit 80
+Kalpesh 77
+Amit 88
+Tejas 93
+Abhishek 65
+The grades are computed as follows :
+Range Grade
+<60 E
+<70 D
+<80 C
+<90 B
+<100 A -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var students = [['Summit', 80], ['Kalpesh', 77], ['Amit', 88], ['Tejas', 93],['Abhishek', 65]];
+       let avg=0;
+       for(let i=0;i<students.length;i++){
+            avg+=students[i][1];
+       }
+       avg=avg/students.length;
+       console.log(avg);
+
+       if (avg < 60) {
+            console.log('Grade: E');
+       } else if (avg < 70) {
+            console.log('Grade: D');
+       } else if (avg < 80) {
+            console.log('Grade: C');
+       } else if (avg < 90) {
+            console.log('Grade: B');
+       } else if (avg <= 100) {
+            console.log('Grade: A');
+       }
+    </script>
+</body>
+</html>

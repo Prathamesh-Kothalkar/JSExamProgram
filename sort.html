@@ -1,0 +1,36 @@
+ <!-- Write a JavaScript program that will display list of student in ascending order 
+according to the marks & calculate the average performance of the class.
+Student Name Marks
+Amit 70
+Sumit 78
+Abhishek 71 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [["Amit",70],["Sumit",78],["Abhishek",71]];
+        let avg = 0;
+        for(let i=0;i<students.length;i++){
+            avg +=students[i][1];
+            
+        }
+        console.log(avg/students.length+"////");
+       students.sort((a,b)=>{
+        console.log(a[1]+b[1])
+        return a[1]-b[1]
+       });
+
+       console.log("Sorted List of Students:");
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i][0] + ": " + students[i][1]);
+        }
+            
+    </script>
+</body>
+</html>

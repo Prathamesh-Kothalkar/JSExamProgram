@@ -1,0 +1,33 @@
+<!-- Develop a JavaScript program to create Rotating Banner Ads -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Banner Ads</title>
+</head>
+<body onload="slide()">
+    <a href="#" id="adLink" target="_blank">
+        <img src="" id="imgg" height="400px" width="400px" alt="Banner Ad"/>
+    </a>
+
+    <script>
+            var count=0;
+            var imgs = ["png1.jpg", "png2.jpg", "png3.jpg"];
+            var links = ["https://www.google.com/", "https://www.facebook.com/", "https://www.youtube.com/"];
+        function slide() {
+            var cimg = document.getElementById('imgg');
+            var adLink = document.getElementById('adLink');
+            cimg.src=imgs[count];
+            adLink.href=links[count]
+            if(count<imgs.length-1){
+                count++;
+            }
+            else{
+                count=0;
+            }
+            setTimeout("slide()", 2000);
+        }
+    </script>
+</body>
+</html>

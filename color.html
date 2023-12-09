@@ -1,0 +1,46 @@
+<!-- Write HTML script that will display dropdown list containing options such as 
+Red, Green, Blue and Yellow. Write a JavaScript program such that when the 
+user selects any options. It will change the background colour of webpage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: red;
+    }
+</style>
+<body>
+    Select Colors
+    <select name="" id="" onchange="getColor(this)">
+        <option value="red" selected>RED</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">yellow</option>
+    </select>
+</body>
+<script>
+    function getColor(val){
+        let color = val.options[val.selectedIndex].value
+        switch (color){
+            case 'red':
+                document.body.style.backgroundColor="red"
+                break;
+            case 'green':
+                document.body.style.backgroundColor="green"
+                break;
+            case 'blue':
+                document.body.style.backgroundColor="blue"
+                break;
+            case 'yellow':
+                document.body.style.backgroundColor="yellow"
+                break;
+
+        }
+    }
+</script>
+</html>

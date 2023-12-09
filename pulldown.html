@@ -1,0 +1,25 @@
+<!-- Write a JavaScript program that will create pull-down menu with three 
+options. Once the user will select the one of the options then user will redirected 
+to that website -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function chn(val){
+       let address = val.options[val.selectedIndex].value;
+       window.open(address,"Page","width=200px heigth=200px")
+    }
+</script>
+<body>
+    <select name="" id="" onchange="chn(this)">
+        <option value="https://google.com">Google</option>
+        <option value="https://web.whatsapp.com/">whatsapp</option>
+        <option value="https://www.youtube.com/">youtube</option>
+    </select>
+</body>
+</html>

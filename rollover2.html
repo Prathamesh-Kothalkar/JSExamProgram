@@ -1,0 +1,54 @@
+<!-- Write a javascript program to design HTML page with books information in 
+tabular format, use rollovers to display the discount information.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      table,tr,td,th{
+        border:2px solid black;
+        border-collapse: collapse;
+        padding: 20px;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Discount</th>
+        </tr>
+        <tr onmouseover="show(this)" onmouseout="hide(this)">
+            <td>C</td>
+            <td>Pk</td>
+            <td>25</td>
+            <td style="display: none;">15</td>
+        </tr>
+        <tr onmouseover="show(this)" onmouseout="hide(this)">
+            <td>js</td>
+            <td>pk</td>
+            <td>50</td>
+            <td style="display: none;">10</td>
+        </tr>
+        <tr onmouseover="show(this)" onmouseout="hide(this)">
+            <td>Pythin</td>
+            <td>Pro65</td>
+            <td>50</td>
+            <td style="display: none;">10%</td>
+        </tr>
+    </table>
+</body>
+<script>
+    function show(row){
+        row.getElementsByTagName('td')[3].style.display="block";
+        row.getElementsByTagName('td')[3].style.backgroundColor="yellow"
+    }
+    function hide(row){
+        row.getElementsByTagName('td')[3].style.display="none";
+    }
+</script>
+</html>

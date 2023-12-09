@@ -1,0 +1,69 @@
+<!-- Write HTML script that will display following structure
+Write the JavaScript code for below operations: 
+(1) Name, Email & Pin Code should not be blank. 
+(2) Pin Code must contain 6 digits & it should not be accept any characters. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td{
+        padding: 10px;
+    }
+    
+</style>
+<body>
+    <form onsubmit="return check()">
+        <table>
+            <tr>
+             <td>Name</td>
+             <td><input type="text" id="name"/></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email"/></td>
+            </tr>
+            <tr>
+                <td>Pin code</td>
+                <td><input type="number" id="pin"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+    function check(){
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var pin = document.getElementById('pin').value;
+
+        if(name != "" && email != "" && pin !=""){
+           var reg = /^[4][1-9]{5}$/
+           if(reg.test(pin)){
+            alert("Data will send sucesful")
+            return true;
+           }
+           else{
+            alert("Enter pin code correctly")
+            return false
+           }
+        }
+        else{
+            alert("not blank")
+            return false
+        }
+    }
+</script>
+</html>

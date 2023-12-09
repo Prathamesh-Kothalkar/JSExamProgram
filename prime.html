@@ -1,0 +1,36 @@
+<!-- Write a javascript program to check whether entered number is prime or not.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = Number(prompt("Enter a Number"))
+        flag=true;
+        if(num==1 || num==2){
+            console.log("Prime Number")
+        }
+        else{
+            for(i=2;i<=num/2;i++){
+                if(num%i==0){
+                    flag= false
+                    break;
+                }
+                else{
+                    flag= true
+                }
+            }
+        }
+
+        if(flag){
+            console.log(num+" Number is Prime")
+        }
+        else{
+            console.log(num+" Number is not Prime");
+        }
+    </script>
+</body>
+</html>
