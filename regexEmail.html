@@ -1,0 +1,29 @@
+<!-- Write a javascript program to validate email ID of the user using regular 
+expression.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var str=prompt("Enter  your email id");
+
+        isValid(str)?alert("Valid Email Id"):alert("Email id is not Valid")
+        
+        function isValid(email){
+            var reg=new RegExp("^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$");
+            if(reg.test(email)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+       
+    </script>
+</body>
+</html>
