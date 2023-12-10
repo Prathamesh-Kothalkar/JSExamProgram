@@ -1,0 +1,51 @@
+<!-- Write a javascript program to create read, update and delete cookies.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="create()">Create</button>
+    <button onclick="read()">Read</button>
+    <button onclick="del()">Delete</button>
+</body>
+<script>
+    function create(){
+        var name=prompt("Enter your name");
+        var current_date=new Date();
+        var future_Date=new Date(current_date);
+        future_Date.setFullYear(current_date.getFullYear()+1);
+        var expiredate=future_Date.toGMTString();
+        document.cookie="name="+name+" ; expires="+expiredate;
+        alert("Cookies are saved Sucessfully")
+    }
+
+    function read(){
+        var cookies=document.cookie;
+        if(cookies){
+            alert("Hello = " +cookies.split('=')[1])
+        }
+        else{
+            alert("Cookies are not Defined")
+        }
+      
+    }
+
+    function del(){
+        var cookies=document.cookie;
+        if(cookies){
+        var current_date=new Date();
+        var future_Date=new Date(current_date);
+        future_Date.setFullYear(current_date.getFullYear()-1);
+        var expiredate=future_Date.toGMTString();
+        document.cookie="name= "+" ; expires="+expiredate;
+        alert("Cookie are Deleted Sucessfully")
+        }
+        else{
+            alert("Cookie are not present to delete");
+        }
+    }
+</script>
+</html>
