@@ -1,0 +1,56 @@
+<!-- Write a javascript program to validate user accounts for multiple set of user 
+ID and password (using swith case statement).  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user = prompt("Enter Username");
+        var pass=prompt("Enter Password");
+
+        function isValid(user,pass){
+            flag=false;
+            switch(user){
+
+                case "user1" :
+                    if(pass=="pass123"){
+                        flag=true;
+                    }
+                    break;
+                
+                case "user2":
+                if(pass=="user123"){
+                        flag=true;
+                    }
+                break;
+                case "user3":
+                if(pass=="meuser3"){
+                     flag=true;
+                    }
+                    break;
+
+            }
+
+            if(flag){
+                console.log("User are Logined Sucessfull")
+                return true;
+            }
+            else{
+                console.log("Not valid");
+                return false;
+            }
+        }
+
+        if(isValid(user,pass)){
+            document.write("Login Sucessfull")
+        }
+        else{
+            document.write("Login to Failed")
+        }
+    </script>
+</body>
+</html>
