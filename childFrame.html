@@ -1,0 +1,20 @@
+<!-- Write a javascript to open a new window and the new window is having two 
+frames. One frame containing buthon as “click here !”, and after clicking this 
+button an image should open in the second frame of that child window. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="handler()">Click here!</button>
+</body>
+    <script>
+        function handler(){
+            new_window=window.open("newWindow.html","new","width=200px heigth=200px")
+        }
+    </script>
+</html>
