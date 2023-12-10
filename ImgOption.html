@@ -1,0 +1,26 @@
+<!-- Write a javascript to create option list containing list of images and then 
+display images in new window as per selection.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select menu 
+    <select name="" id="" onclick="handler(this)">
+        <option value="png1.jpg">Img1</option>
+        <option value="png2.jpg">Img2</option>
+        <option value="png3.jpg">Img3</option>
+    </select>
+    <img src="png1.jpg" alt="" width="400px" height="400px" id="chn">
+</body>
+    <script>
+        function handler(get){
+            link=get.options[get.selectedIndex].value;
+            document.getElementById('chn').src=link;
+        }
+    </script>
+</html>
