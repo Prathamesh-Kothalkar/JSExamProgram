@@ -1,0 +1,37 @@
+<!-- Write a javascript function that accepts a string as a parameter and find the 
+length of the string.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function len(str){
+            // var count = str.length
+            // return count; 
+
+            //by using for loop
+
+       /*var count=0;
+            for(char of str){
+                count++;
+            }
+            return count;
+            */
+
+            var count=0;
+            for(char in str){
+                count++;
+            }
+            return count
+        }
+
+        var str="Hello Prathamesh ";
+        console.log("By lenght() "+ str.length)
+        console.log("Our method() "+len(str));
+    </script>
+</body>
+</html>
