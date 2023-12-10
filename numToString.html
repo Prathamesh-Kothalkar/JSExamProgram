@@ -1,0 +1,33 @@
+<!-- Develop javascript to convert the given character to unicode and vice-versa.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function strToCode(str){
+            var arr=[];
+            for(i=0;i<str.length;i++){
+                arr[i]=str.charCodeAt(i);
+            }
+            return arr;
+        }
+
+        function numTostr(num){
+            var strArr=[];
+            var numArr=num.split(",");
+            for(i=0;i<numArr.length;i++){
+                strArr[i]=String.fromCharCode(Number(numArr[i]))
+            }
+            var newArr=strArr.join('');
+            return newArr;
+        }
+        str="ABCY";
+        console.log(strToCode(str));
+        console.log(numTostr("65,66,67,89"))
+    </script>
+</body>
+</html>
